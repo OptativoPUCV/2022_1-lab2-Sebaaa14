@@ -14,3 +14,9 @@ list.c:32:37: error: ‘Lista’ undeclared (first use in this function); did yo
 list.c:32:37: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 9e2db33
+Fri Mar 18 00:32:44 UTC 2022: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  1|5
+total_score: 10/70
+e8f60ed

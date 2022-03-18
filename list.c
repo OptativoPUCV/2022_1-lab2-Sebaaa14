@@ -68,7 +68,7 @@ void pushFront(List * list, void * data) {
     //} else {
         nodriz->next = list->head;
         list->head->prev = nodriz;
-    }
+    //}
     
     list->head = nodriz;
   

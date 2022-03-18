@@ -82,14 +82,14 @@ void pushBack(List * list, void * data) {
 void pushCurrent(List * list, void * data) {
   Node * nodriz = createNode(data);
 
-  if (list->current->next){
+  if (list->current->next)
     nodriz->next= list->current->next;
     nodriz->prev= list->current;    
-  }
-  if (list->current->next){
+  
+  if (list->current->next)
     list->current->next->prev = nodriz;
     list->current->next = nodriz;
-  }
+  
   if(list->current==list->tail)
         list->tail=nodriz;
     

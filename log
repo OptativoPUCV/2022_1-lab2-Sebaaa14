@@ -329,3 +329,17 @@ list.c:91:5: note: ...this statement, but the latter is misleadingly indented as
 cc1: all warnings being treated as errors
 Compilation failed
 84202f3
+Fri Mar 18 15:36:18 UTC 2022: 
+ list.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+list.c: In function ‘pushCurrent’:
+list.c:85:3: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   if (list->current->next)
+   ^~
+list.c:87:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+     nuevo->prev= list->current;
+     ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+fd0a1a6

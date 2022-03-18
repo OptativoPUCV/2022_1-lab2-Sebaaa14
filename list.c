@@ -63,10 +63,14 @@ void * prevList(List * list) {
 void pushFront(List * list, void * data) {
     
   Node * nodriz = createNode(data);
-  nodriz->next = list->head;
-  list->head->prev = nodriz;
-
-  list->head =nodriz;
+    if (list->head == NULL) {
+        list->tail = nodriz;
+    } else {
+        nodriz->next = list->head;
+        list->head->prev = nodriz;
+    }
+    
+    list->head = nodriz;
   
 }
 

@@ -83,12 +83,12 @@ void pushCurrent(List * list, void * data) {
   if (list->current !=NULL){
   Node * nuevo = createNode(data);
 
-  if (list->current->next)
+  //if (list->current->next)
   nuevo->next= list->current->next;
   nuevo->prev= list->current;    
   
-  if (list->current->next)
-      list->current->next->prev = nuevo;
+  //if (list->current->next)
+  list->current->next->prev = nuevo;
   list->current->next = nuevo;
   
   if (list->current==list->tail)

@@ -80,23 +80,19 @@ void pushBack(List * list, void * data) {
 }
 
 void pushCurrent(List * list, void * data) {
-  Node * new = createNode(data);
+  Node * nodriz = createNode(data);
 
-     if(list->current->next)
-    new->next = list->current->next;
-    new->prev = list->current;
-
+  if (list->current->next)
+    nodriz->next= list->current->next;
+    nodriz->prev= list->current;    
+  
+  if (list->current->next)
+    list->current->next->prev = nodriz;
+    list->current->next = nodriz;
+  
+  if (list->current==list->tail)
+        list->tail=nodriz;
     
-        
-
-    if(list->current->next)
-       list->current->next->prev = new;
-    list->current->next = new;
-    
-       
-
-    if(list->current==list->tail)
-        list->tail=new;
 }
 
 void * popFront(List * list) {

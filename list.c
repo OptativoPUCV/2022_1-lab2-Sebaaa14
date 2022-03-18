@@ -71,7 +71,7 @@ void pushFront(List * list, void * data) {
     //}
     
     
-  //list->head = nodriz;
+  list->head = nodriz;
   
 }
 

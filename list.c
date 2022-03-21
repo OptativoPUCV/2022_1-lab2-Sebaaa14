@@ -115,9 +115,18 @@ void * popCurrent(List * list) {
      if (aux->prev != NULL) 
         aux->prev->next = aux->next;
 
-  (void*) valor = (void*) aux->data;
-  
+  void * valor = (void*) aux->data; // Para el return con valor
 
+  if(list->current == list->tail)
+    list->tail = list->current->prev;
+      if(list->current == list->head)
+        list->head = list->current->next;
+        
+    list->current = aux->prev;
+
+
+  free(aux);
+  return valor;
 }
 
 void cleanList(List * list) {
